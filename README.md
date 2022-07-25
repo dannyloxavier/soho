@@ -2,7 +2,7 @@
 
 Soho is a minimalist two-column [hugo](https://gohugo.io) theme based on [Hyde](https://github.com/spf13/hyde) inspired by the success of [Flex](https://github.com/alexandrevicenzi/Flex).
 
-![Screenshot](https://raw.githubusercontent.com/alexandrevicenzi/soho/master/images/tn.png)
+![Screenshot](https://raw.githubusercontent.com/dannyloxavier/soho-pt-BR/master/images/tn.png)
 
 ## Features
 
@@ -16,6 +16,7 @@ Soho is a minimalist two-column [hugo](https://gohugo.io) theme based on [Hyde](
 - Pagination
 - Customizable
 - Support all [Hugo Internals](https://gohugo.io/templates/internal/)
+- Versão, esta, traduzida para português brasileiro.
 
 ## Integrations
 
@@ -27,7 +28,7 @@ Soho is a minimalist two-column [hugo](https://gohugo.io) theme based on [Hyde](
 To install Soho as your default theme, first install this repository in the `themes/` directory:
 
     $ cd themes/
-    $ git submodule add https://github.com/alexandrevicenzi/soho.git
+    $ git submodule add https://github.com/dannyloxavier/soho-pt-BR.git
 
 Second, specify `soho` as your default theme in the `config.toml` file. Just add the line
 
@@ -40,7 +41,7 @@ at the top of the file.
 ```toml
 baseURL = "https://example.com"
 title = "Soho"
-languageCode = "en"
+languageCode = "pt-br"
 enableInlineShortcodes = true
 
 summarylength = 10
