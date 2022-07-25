@@ -371,3 +371,56 @@ figcaption {
 .nowrap {
   white-space: nowrap;
 }
+
+
+/* TOC */
+/* Modified work from MunifTanjim:
+ * https://github.com/MunifTanjim/minimo/blob/master/src/stylesheets/layouts/entry/_toc.scss
+ */
+
+details,
+summary {
+  display: list-time;
+}
+
+.toc-title {
+  font-size:28px;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.no-details {
+  details {
+    &:not([open]) > :not(summary) {
+      display: none;
+    }
+
+    & > summary:before {
+      content: '\25BC';
+      display: list-time;
+      margin-right: 0.25em;
+      transition: 0.1s;
+      transform: rotate(-90deg);
+    }
+
+    &[open] > summary:before {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.entry-toc {
+  margin-bottom: 2.5em;
+
+  ul {
+    list-style: none;
+  }
+
+  nav {
+    & > ul {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+
+<!-- ### TOC ###
+Modified work from MunifTanjim: 
+https://github.com/MunifTanjim/minimo/blob/master/layouts/partials/entry/toc.html
+-->
+
+{{ if eq .Params.toc true }}
+<details class='container entry-toc'>
+  <summary class='toc-title'>
+    <span>
+      Índice
+    </span>
+  </summary>
+  {{ .TableOfContents }}
+</details>
+{{ end }}
