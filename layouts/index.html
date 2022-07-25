@@ -10,7 +10,7 @@
         </h1>
 
         <div class="post-date">
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> &middot; {{ .ReadingTime }} min read
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "02/01/2006" }}</time> &middot; Leitura em {{ .ReadingTime }} min
         </div>
 
         <div>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="read-more-link">
-          <a href="{{ .Permalink }}">Read More</a>
+          <a href="{{ .Permalink }}">Leia Mais</a>
         </div>
       </article>
     {{- end }}
