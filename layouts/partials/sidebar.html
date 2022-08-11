@@ -11,7 +11,11 @@
         {{ with .Site.Params.profilePicture }}
         <div class="author-image">
           <a href="{{ $.Site.BaseURL }}">
-            <img src="{{ . | relURL }}" class="img-circle img-headshot center" alt="Foto de Perfil">
+	    <picture>
+	       <source srcset="{{ . | relURL }}.webp" type="image/webp">
+	       <source srcset="{{ . | relURL }}.png" type="image/png">
+               <img src="{{ . | relURL }}.png" class="img-circle img-headshot center" alt="Foto de Perfil">
+            </picture>
           </a>
         </div>
         {{ end }}
