@@ -1,0 +1,13 @@
+{{ $img := .File.BaseFileName }}
+{{ $extension := .Get 1 }}
+
+{{ $result := findRE $extension "jpg|jpeg|png|gif" }}
+{{ if not gt (len $result) 0 }}
+  {{ errorf "Extensão para fallback não definida" }}
+{{ end }}
+
+<picture>
+	<source srcset="{{ $img.File.BaseFileName }}.webp" type="image/webp">
+	<source srcset="{{ $img.File.BaseFileName }}.{{ $extension }}" type="image/{{ $extension }}">
+	<img src="{{ $img.File.BaseFileName }}.{{ $extension }}">
+</picture>
