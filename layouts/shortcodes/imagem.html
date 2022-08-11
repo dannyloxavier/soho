@@ -1,15 +1,11 @@
-{{ $img := .Page.Resources.GetMatch (printf "*%s*" (.Get 0)) }}
+{{ $img := .Get 0 }}
 {{ $extension := .Get 1 }}
-
-{{ $result := findRE $extension "jpg|jpeg|png|gif" }}
-{{ if not gt (len $result) 0 }}
-  {{ errorf "Extensão para fallback não definida" }}
-{{ end }}
+{{ $alt := .Get 2 }}
 
 <center>
 <picture>
-	<source srcset="{{ $img.File.BaseFileName }}.webp" type="image/webp">
-	<source srcset="{{ $img.File.BaseFileName }}.{{ $extension }}" type="image/{{ $extension }}">
-	<img src="{{ $img.File.BaseFileName }}.{{ $extension }}">
+	<source srcset="{{ $img }}.webp" type="image/webp">
+	<source srcset="{{ $img }}.{{ $extension }}" type="image/{{ $extension }}">
+	<img src="{{ $img }}.{{ $extension }}" alt="{{ $alt }}">
 </picture>
 </center>
